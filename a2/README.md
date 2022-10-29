@@ -2,6 +2,7 @@
 
 Since $o$ is the only true outside word, then 
 
+$$
 \begin{aligned}
 \forall w \in \text{Vocab}, y_w = 
   \begin{cases}
@@ -9,15 +10,18 @@ Since $o$ is the only true outside word, then
     0, & \text{o.w.}
   \end{cases}
 \end{aligned}
+$$
 
 So for all $o \in \text{Vocab}$, we have
 
+$$
 \begin{aligned}
 -\sum_{w\in \text{Vocab}}y_w\log{(\hat{y}_w)} &= -\sum_{w\in \text{Vocab}} 1\{y_w = 1\} \log{(\hat{y}_w)} \\
 &= -\log{(\hat{y}_o)} \\
 &= -\log{P(O=o|C=c)}\\
 &= \boldsymbol{J}_{\text{naive\_softmax}}(\boldsymbol{v}_c, o, \boldsymbol{U})
 \end{aligned}
+$$
 
 (b)
 
